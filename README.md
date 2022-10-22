@@ -12,6 +12,10 @@ The goal of this exercise is to develop a pet park smart contract. The basic str
 
 To install foundry refer to the document [here](https://book.getfoundry.sh/getting-started/installation).
 
+This assignment is divided into two parts. In `Part A` of the assignment you need to write the unimplemented `PetPark` contract. In `Part B` of the assignment we have a few incomplete tests you need to complete in `test/PetPark.t.sol`.
+
+### Part A
+
 Complete this contract with following specifications for each function
 
 -   add
@@ -32,6 +36,19 @@ Complete this contract with following specifications for each function
 -   giveBackAnimal
     -   Throw an error if user hasn't borrowed before.
     -   Emit event `Returned` with parameter `Animal Type`.
+
+### Part B
+
+Complete the following tests in `test/PetPark.t.sol`
+
+-   `testCannotAddAnimalWhenNonOwner`
+    -   Test that any non-owner account cannot add animals using the `add` function
+
+-   `testExpectEmitOnBorrow`
+    -   Test that the `Borrowed` event is emitted correctly when `borrow` function is called with correct parameters.
+
+-   `testBorrowCountDecrement`
+    -   Test that the count of animal decreases correctly when the `borrow` function is called.
 
 ## Evaluation
 
@@ -58,7 +75,7 @@ Complete this contract with following specifications for each function
 ## Note
 
 -   The error strings (mentioned in revert statement) must be same as the ones mentioned in tests.
--   Use modifier where appropriate.
+-   Use modifiers, structs where appropriate.
 
 ## Reference
 
