@@ -58,6 +58,11 @@ Complete the following tests in `test/PetPark.t.sol`
     git clone --recurse-submodules CLONE_URL
     ```
 
+-   Install `forge-std` library using the below command
+    ```
+    forge install foundry-rs/forge-std --no-commit
+    ```
+    
 -   Create a new branch with your name. You can use the following command
 
     ```
