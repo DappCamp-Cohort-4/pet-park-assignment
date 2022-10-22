@@ -44,8 +44,8 @@ Complete the following tests in `test/PetPark.t.sol`
 -   `testCannotAddAnimalWhenNonOwner`
     -   Test that any non-owner account cannot add animals using the `add` function
 
--   `testExpectEmitOnBorrow`
-    -   Test that the `Borrowed` event is emitted correctly when `borrow` function is called with correct parameters.
+-   `testCannotBorrowWhenAgeZero`
+    -   Test that the borrow function fails when called with an age equal to 0.
 
 -   `testBorrowCountDecrement`
     -   Test that the count of animal decreases correctly when the `borrow` function is called.

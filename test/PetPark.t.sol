@@ -43,9 +43,8 @@ contract PetParkTest is Test, PetPark {
     }
 
     function testCannotBorrowWhenAgeZero() public {
-        vm.expectRevert("Invalid Age");
-
-        petPark.borrow(0, Gender.Male, AnimalType.Fish);
+        // 2. Complete this test and remove the assert line below
+        assert(false);
     }
 
     function testCannotBorrowUnavailableAnimal() public {
@@ -120,8 +119,11 @@ contract PetParkTest is Test, PetPark {
     }
 
     function testExpectEmitOnBorrow() public {
-        // 2. Complete this test and remove the assert line below
-        assert(false);
+        petPark.add(AnimalType.Fish, 5);
+        vm.expectEmit(false, false, false, true);
+
+        emit Borrowed(AnimalType.Fish);
+        petPark.borrow(24, Gender.Male, AnimalType.Fish);
     }
 
     function testBorrowCountDecrement() public {
